@@ -4,6 +4,10 @@ connectToMongo();
 
 const app = express()
 const port = 5000
+var cors = require('cors')
+app.use(cors())
+
+
 
 app.use(express.json());
 
@@ -13,4 +17,4 @@ app.use('/api/notes',require('./routes/notes'))
  
 app.listen(port, () => {
   console.log(`iNoteBook listening at http://localhost:${port}`)
-})
+}) 
